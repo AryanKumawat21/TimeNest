@@ -1,0 +1,166 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A scheduled timeline task, all-day habit, or unscheduled inbox item.",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "description": "UID of the authenticated owner.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "title": {
+          "type": "string",
+          "description": "Display title of the task.",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "date": {
+          "type": "string",
+          "description": "Scheduled date in YYYY-MM-DD format, or empty string for Inbox tasks.",
+          "minLength": 0,
+          "maxLength": 10,
+          "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2})?$"
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Scheduled 24h start time in HH:MM format, or empty string for Inbox/All-Day tasks.",
+          "minLength": 0,
+          "maxLength": 5,
+          "pattern": "^([0-2][0-9]:[0-5][0-9])?$"
+        },
+        "isAllDay": {
+          "type": "boolean",
+          "description": "Whether the task is an all-day circular routine at the top of the timeline."
+        },
+        "durationMinutes": {
+          "type": "integer",
+          "description": "Task duration in minutes (1 to 720)."
+        },
+        "color": {
+          "type": "string",
+          "description": "Visual theme color key.",
+          "enum": ["coral", "sage", "slate", "amber", "lavender", "teal"],
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "icon": {
+          "type": "string",
+          "description": "Category icon identifier.",
+          "enum": [
+            "book",
+            "alarm",
+            "yoga",
+            "bike",
+            "users",
+            "laundry",
+            "phone",
+            "run",
+            "plant",
+            "sparkles",
+            "coffee",
+            "code",
+            "briefcase",
+            "heart",
+            "music",
+            "utensils"
+          ],
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "recurrence": {
+          "type": "string",
+          "description": "Recurrence pattern for repeating routines.",
+          "enum": ["none", "daily", "weekdays", "weekly"],
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Completion state for non-recurring tasks."
+        },
+        "completedDates": {
+          "type": "array",
+          "description": "Bounded list of YYYY-MM-DD date strings where a recurring task was completed (max 366)."
+        },
+        "subtasks": {
+          "type": "array",
+          "description": "Bounded list of serialized subtask strings '0:Title' or '1:Title' (max 20)."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional plain-text notes for the task.",
+          "minLength": 0,
+          "maxLength": 1000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the task was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the task was last updated."
+        }
+      },
+      "required": [
+        "ownerId",
+        "title",
+        "date",
+        "startTime",
+        "isAllDay",
+        "durationMinutes",
+        "color",
+        "icon",
+        "recurrence",
+        "completed",
+        "completedDates",
+        "subtasks",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "UserPreference": {
+      "title": "UserPreference",
+      "description": "User-specific planner settings such as dark mode theme.",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "description": "UID of the user.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "theme": {
+          "type": "string",
+          "description": "UI color theme preference.",
+          "enum": ["light", "dark"],
+          "minLength": 4,
+          "maxLength": 5
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when preferences were last updated."
+        }
+      },
+      "required": ["ownerId", "theme", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/tasks/{taskId}": {
+      "schema": { "$ref": "#/entities/Task" },
+      "description": "Collection of user tasks for the timeline and inbox."
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserPreference" },
+      "description": "Collection of isolated per-user theme and planner preferences."
+    }
+  }
+}

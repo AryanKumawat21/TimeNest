@@ -1,0 +1,6 @@
+{
+  "name": "Structured Day Planner",
+  "description": "A clean, visual day-to-day timeline planner with inbox management, routines, focus timer, AI scheduling, dark mode, and Firebase cloud synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
