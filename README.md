@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⏳ TimeNest
+# 📆 TimeNest
 
 ### Plan Smarter. Stay Focused. Make Every Day Count.
 
@@ -21,19 +21,21 @@
 
 ### Main Planner Dashboard
 <p align="center">
-  <img src="assets/dashboard.png" alt="TimeNest main planner dashboard" width="100%">
+  <img width="1905" height="846" alt="Screenshot 2026-10-26 105655" src="https://github.com/user-attachments/assets/4f8232ad-f507-4581-9adf-197980875269" />
+
 </p>
 
 ### Create and Customize Tasks
 <p align="center">
-  <img src="assets/task-editor-light.png" alt="TimeNest task editor in light theme" width="48%">
+  <img width="1898" height="846" alt="Screenshot 2026-10-26 105716" src="https://github.com/user-attachments/assets/f8dd7d45-5c53-40cd-b3f9-3fba4615877f" />
   &nbsp;
-  <img src="assets/task-editor-dark.png" alt="TimeNest task editor in dark theme" width="48%">
+  <img width="1898" height="846" alt="Screenshot 2026-10-26 105716" src="https://github.com/user-attachments/assets/bffe050f-060b-437b-be2a-14eacc58386c" />
 </p>
 
 ### Calendar View
 <p align="center">
-  <img src="assets/calendar-view.png" alt="TimeNest monthly calendar view" width="100%">
+  <img width="1901" height="831" alt="Screenshot 2026-10-26 105736" src="https://github.com/user-attachments/assets/2f9604f0-2a63-4148-ba97-b3fd6f5ae949" />
+
 </p>
 
 ---
