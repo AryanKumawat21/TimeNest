@@ -21,20 +21,21 @@
 
 ### Main Planner Dashboard
 <p align="center">
-  <img width="1905" height="846" alt="Screenshot 2026-10-26 105655" src="https://github.com/user-attachments/assets/4f8232ad-f507-4581-9adf-197980875269" />
+  <img width="1518" height="677" alt="Screenshot 2026-10-26 105655" src="https://github.com/user-attachments/assets/4f8232ad-f507-4581-9adf-197980875269" />
 
 </p>
 
 ### Create and Customize Tasks
 <p align="center">
-  <img width="1898" height="846" alt="Screenshot 2026-10-26 105716" src="https://github.com/user-attachments/assets/f8dd7d45-5c53-40cd-b3f9-3fba4615877f" />
+  <img width="1518" height="677" alt="Screenshot 2026-10-26 105716" src="https://github.com/user-attachments/assets/f8dd7d45-5c53-40cd-b3f9-3fba4615877f" />
   &nbsp;
-  <img width="1898" height="846" alt="Screenshot 2026-10-26 105716" src="https://github.com/user-attachments/assets/bffe050f-060b-437b-be2a-14eacc58386c" />
+  <img width="1518" height="677" alt="Screenshot 2026-10-26 105813" src="https://github.com/user-attachments/assets/4feecfb9-4ddd-460d-b4e4-6019e450c742" />
+
 </p>
 
 ### Calendar View
 <p align="center">
-  <img width="1901" height="831" alt="Screenshot 2026-10-26 105736" src="https://github.com/user-attachments/assets/2f9604f0-2a63-4148-ba97-b3fd6f5ae949" />
+  <img width="1518" height="677" alt="Screenshot 2026-10-26 105736" src="https://github.com/user-attachments/assets/2f9604f0-2a63-4148-ba97-b3fd6f5ae949" />
 
 </p>
 
